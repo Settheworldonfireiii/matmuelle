@@ -1,0 +1,12 @@
+program matmulle
+implicit none
+real, dimension(4,4) :: A1, A2, A3, A4
+real(8)    :: theta1, alpha1, d1, a_1, theta2, alpha2, d2, a_2, &
+    theta3, alpha3, d3, a_3, theta4, alpha4, d4, a_4
+    
+    READ(*,*) theta1, alpha1, d1, a_1, theta2, alpha2, d2, a_2, &
+        theta3, alpha3, d3, a_3, theta4, alpha4, d4, a_4
+    A1 = reshape([cos(theta1), sin(theta1), 0, d1*cos(alpha1), -sin(theta1),cos(theta1),0, d1*sin(theta1), &
+        0, 0, 1, a_1, 0, 0, 0, 1], [4, 4])
+        
+end program matmulle
